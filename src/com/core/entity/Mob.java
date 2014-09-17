@@ -1,5 +1,7 @@
 package com.core.entity;
 
+import java.awt.Graphics;
+
 public class Mob extends Entity {
 
 	protected int direction = 0;
@@ -20,7 +22,7 @@ public class Mob extends Entity {
 			direction = 3;
 	}
 
-	public void render() {
+	public void render(Graphics g) {
 
 	}
 	
