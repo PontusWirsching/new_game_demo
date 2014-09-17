@@ -6,7 +6,7 @@ public class Start extends LEngine {
 
 	public Start(int width, int height, String title) {
 		super(width, height, title);
-		
+
 		start();
 	}
 
@@ -14,10 +14,10 @@ public class Start extends LEngine {
 	public void update() {
 
 	}
-	
+
 	@Override
 	public void render() {
-		System.out.println("fuck");
+
 	}
 
 	public static void main(String[] args) {
