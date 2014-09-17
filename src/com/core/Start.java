@@ -17,7 +17,7 @@ public class Start extends LEngine {
 	
 	@Override
 	public void render() {
-
+		System.out.println("fuck");
 	}
 
 	public static void main(String[] args) {
