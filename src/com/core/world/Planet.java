@@ -26,6 +26,8 @@ public class Planet {
 
 		g.setColor(color);
 
+		g.drawOval(pos.getX() - radius, pos.getY() - radius, radius * 2, radius * 2);
+		
 	}
 
 }
