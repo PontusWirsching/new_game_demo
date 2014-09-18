@@ -11,9 +11,6 @@ import com.engine.state.StateHandler;
 public class Start extends LEngine {
 
 	private Player player;
-	
-	public boolean pressed = false;
-	public int number = -1;
 
 	public Start(int width, int height, String title) {
 		super(width, height, title);
@@ -39,9 +36,7 @@ public class Start extends LEngine {
 
 	@Override
 	public void update() {
-
 		StateHandler.update();
-
 		player.update();
 	}
 
@@ -49,7 +44,6 @@ public class Start extends LEngine {
 	public void render() {
 
 		StateHandler.render(g);
-
 		player.render(g);
 
 	}

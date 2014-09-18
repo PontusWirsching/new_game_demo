@@ -9,7 +9,6 @@ public class Textures {
 	public static void load() {
 
 		guis = new SpriteSheet("/textures/gui.png");
-		
 		guis.loadSprite("INVENTORYGUI", 0, 0, 89, 89);
 
 	}
