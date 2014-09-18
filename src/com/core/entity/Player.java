@@ -2,7 +2,6 @@ package com.core.entity;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.engine.input.Keyboard;
 
@@ -11,10 +10,6 @@ public class Player extends Mob {
 	public boolean walking = false;
 
 	public Player() {
-		Keyboard.addKey(KeyEvent.VK_D);
-		Keyboard.addKey(KeyEvent.VK_RIGHT);
-		Keyboard.addKey(KeyEvent.VK_A);
-		Keyboard.addKey(KeyEvent.VK_LEFT);
 		
 	}
 
