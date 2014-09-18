@@ -7,13 +7,11 @@ import com.engine.state.StateHandler;
 public class Start extends LEngine {
 
 	private Player player;
-	
 
 	public Start(int width, int height, String title) {
 		super(width, height, title);
 
 		StateHandler.addState(new Game("GAME"));
-		
 		StateHandler.setState("GAME");
 		
 		player = new Player();
