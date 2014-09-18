@@ -17,15 +17,6 @@ public class WorldGenerator {
 		for (int i = 0; i < 50; i++) {
 			Planet p = generatePlanet(currentX, currentY);
 			
-			currentDistance += p.radius * 2;
-		
-			int angle = random.nextInt(360);
-			System.out.println(angle);
-
-			angle -= 90.0;
-			
-			currentX  += (int) (Math.cos(Math.toRadians(angle)) * currentDistance);
-			currentY  += (int) (Math.sin(Math.toRadians(angle)) * currentDistance);
 
 
 		}
