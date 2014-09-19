@@ -30,9 +30,9 @@ public class WorldGenerator {
 		x += -Game.xOffset + LEngine.WIDTH - Game.genRadius;
 		y += -Game.yOffset + LEngine.HEIGHT - Game.genRadius;
 
-		System.out.println(x + ", " + y);
+//		System.out.println(x + ", " + y);
 		for (int i = 0; i < w.planets.size(); i++) {
-			System.out.println("PLANET: " + i);
+//			System.out.println("PLANET: " + i);
 			if (Util.getDistance(x, y, w.planets.get(i).pos.x, w.planets.get(i).pos.y) < 500 && Util.getDistance(x, y, w.planets.get(i).pos.x, w.planets.get(i).pos.y) > 50) {
 				generate = true;
 			} else {
