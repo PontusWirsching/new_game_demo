@@ -2,14 +2,15 @@ package com.core;
 
 import java.awt.event.KeyEvent;
 
-import com.core.entity.Player;
+import com.core.item.Inventory;
 import com.core.tools.Textures;
 import com.engine.LEngine;
 import com.engine.input.Keyboard;
 import com.engine.state.StateHandler;
 
 public class Start extends LEngine {
-
+	
+	private Inventory inventory;
 
 	public Start(int width, int height, String title) {
 		super(width, height, title);
@@ -28,7 +29,8 @@ public class Start extends LEngine {
 		Keyboard.addKey(KeyEvent.VK_S);
 
 		Textures.load();
-
+		inventory = new Inventory();
+		
 		skipIntro();
 		start();
 
@@ -37,13 +39,14 @@ public class Start extends LEngine {
 	@Override
 	public void update() {
 		StateHandler.update();
+		inventory.update();
 	}
 
 	@Override
 	public void render() {
 		Game.worldGraphics = g.create();
-
 		StateHandler.render(g);
+		inventory.render(g);
 
 	}
 

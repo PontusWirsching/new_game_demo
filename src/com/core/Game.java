@@ -24,19 +24,14 @@ public class Game extends State {
 
 		currentWorld = new World();
 
-
 	}
 
 	int speed = 5;
 
-	
 	@Override
 	public void update() {
 		currentWorld.update();
 
-	
-		
-		
 		if (Keyboard.getKey(0)) {
 			xOffset -= speed;
 		}
@@ -51,8 +46,7 @@ public class Game extends State {
 		}
 
 		player.update();
-		
-		
+
 		WorldGenerator.tryToGenerate();
 
 	}
@@ -60,14 +54,13 @@ public class Game extends State {
 	public static Graphics worldGraphics;
 
 	public static int genRadius = 200;
-	
+
 	@Override
 	public void render(Graphics g) {
 
-		
-		
 		g.setColor(Color.RED);
-		g.drawOval(LEngine.WIDTH / 2 - genRadius, LEngine.HEIGHT / 2 - genRadius, genRadius*2,genRadius*2);
+		g.drawOval(LEngine.WIDTH / 2 - genRadius, LEngine.HEIGHT / 2
+				- genRadius, genRadius * 2, genRadius * 2);
 
 		worldGraphics.translate(xOffset, yOffset);
 

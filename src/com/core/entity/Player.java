@@ -7,13 +7,11 @@ import com.core.item.Inventory;
 import com.engine.input.Keyboard;
 
 public class Player extends Mob {
-
-	private Inventory inventory;
 	
 	public boolean walking = false;
 
 	public Player() {
-		inventory = new Inventory();
+
 	}
 
 	public void update() {
@@ -30,7 +28,6 @@ public class Player extends Mob {
 		} else {
 			walking = false;
 		}
-		inventory.update();
 	}
 
 	public void render(Graphics g) {
@@ -38,7 +35,6 @@ public class Player extends Mob {
 			g.setColor(Color.WHITE);
 			g.drawRect(200, 200, 50, 50);
 		}
-		inventory.render(g);
 	}
 
 }
