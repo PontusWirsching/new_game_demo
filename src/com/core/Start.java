@@ -10,7 +10,6 @@ import com.engine.state.StateHandler;
 
 public class Start extends LEngine {
 
-	private Player player;
 	
 	public boolean pressed = false;
 	public int number = -1;
@@ -31,7 +30,6 @@ public class Start extends LEngine {
 		Keyboard.addKey(KeyEvent.VK_W);
 		Keyboard.addKey(KeyEvent.VK_S);
 
-		player = new Player();
 		Textures.load();
 
 		skipIntro();
@@ -44,15 +42,14 @@ public class Start extends LEngine {
 
 		StateHandler.update();
 
-		player.update();
 	}
 
 	@Override
 	public void render() {
+		Game.worldGraphics = g.create();
 
 		StateHandler.render(g);
 
-		player.render(g);
 
 	}
 
