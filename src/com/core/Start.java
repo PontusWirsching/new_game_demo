@@ -10,9 +10,6 @@ import com.engine.state.StateHandler;
 
 public class Start extends LEngine {
 
-	
-	public boolean pressed = false;
-	public int number = -1;
 
 	public Start(int width, int height, String title) {
 		super(width, height, title);
@@ -39,9 +36,7 @@ public class Start extends LEngine {
 
 	@Override
 	public void update() {
-
 		StateHandler.update();
-
 	}
 
 	@Override
@@ -49,7 +44,6 @@ public class Start extends LEngine {
 		Game.worldGraphics = g.create();
 
 		StateHandler.render(g);
-
 
 	}
 
